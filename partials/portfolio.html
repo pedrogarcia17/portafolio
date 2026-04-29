@@ -3,30 +3,38 @@
     <h2 class="section-title wow flipInX" data-wow-delay="0.4s">My Remarkable Works</h2>
     <div class="row">
       <div class="col-md-12">
-        <!-- Filtros -->
+        <!-- Filtros (AHORA CON JS PROPIO) -->
         <div class="controls text-center">
-          <a class="filter active btn btn-common" data-filter="all">All</a>
-          <a class="filter btn btn-common" data-filter=".design">Design</a>
-          <a class="filter btn btn-common" data-filter=".development">Development</a>
-          <a class="filter btn btn-common" data-filter=".print">Print</a>
+          <a class="btn btn-common" onclick="mostrarTodos()">All</a>
+          <a class="btn btn-common" onclick="filtrar('design')">Design</a>
+          <a class="btn btn-common" onclick="filtrar('development')">Development</a>
+          <a class="btn btn-common" onclick="filtrar('print')">Print</a>
         </div>
       </div>
 
       <!-- Portfolio items -->
       <div id="portfolio" class="row wow fadeInDown" data-wow-delay="0.4s">
+
+        <!-- ITEM 1 (MODIFICADO) -->
         <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix development print">
           <div class="portfolio-item">
             <div class="shot-item">
-              <img src="assets/img/gallery/img-1.jpg" alt="" />
+              <img src="assets/img/gallery/img-1.jpg" id="imgCambiar" alt="" />
               <div class="overlay">
                 <div class="icons">
                   <a class="lightbox preview" href="assets/img/gallery/img-1.jpg"><i class="icon-eye"></i></a>
                   <a class="link" href="#"><i class="icon-link"></i></a>
                 </div>
               </div>
+              <!-- BOTÓN NUEVO -->
+              <button onclick="cambiarImagen()" class="btn btn-common" style="margin-top:10px;">
+                Cambiar imagen
+              </button>
             </div>
           </div>
         </div>
+
+        <!-- ITEM 2 -->
         <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix design print">
           <div class="portfolio-item">
             <div class="shot-item">
@@ -40,6 +48,8 @@
             </div>
           </div>
         </div>
+
+        <!-- ITEM 3 -->
         <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix development">
           <div class="portfolio-item">
             <div class="shot-item">
@@ -53,6 +63,8 @@
             </div>
           </div>
         </div>
+
+        <!-- ITEM 4 -->
         <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix development design">
           <div class="portfolio-item">
             <div class="shot-item">
@@ -66,6 +78,8 @@
             </div>
           </div>
         </div>
+
+        <!-- ITEM 5 -->
         <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix development">
           <div class="portfolio-item">
             <div class="shot-item">
@@ -79,6 +93,8 @@
             </div>
           </div>
         </div>
+
+        <!-- ITEM 6 -->
         <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix print design">
           <div class="portfolio-item">
             <div class="shot-item">
@@ -92,6 +108,7 @@
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </div>
